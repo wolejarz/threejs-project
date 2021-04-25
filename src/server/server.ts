@@ -1,13 +1,11 @@
-import http from "http"
-import path from "path"
 import express from "express"
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import path from "path"
+import http from "http"
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
 const port: number = 3000
 
 class App {
+
     private server: http.Server
     private port: number
 
@@ -16,7 +14,6 @@ class App {
         const app = express()
         app.use(express.static(path.join(__dirname, '../client')))
         app.use('/build/three.module.js', express.static(path.join(__dirname, '../../node_modules/three/build/three.module.js')))
-        app.use('/jsm/controls/OrbitControls', express.static(path.join(__dirname, '../../node_modules/three/examples/jsm/controls/OrbitControls.js')))
 
         this.server = new http.Server(app);
     }
@@ -26,6 +23,7 @@ class App {
             console.log( `Server listening on port ${this.port}.` )
         })
     }
+
 }
 
-new App(port).Start()
+new App(port). Start()

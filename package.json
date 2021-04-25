@@ -1,21 +1,17 @@
 {
-  "name": "threejs-project",
+  "name": "deleteme",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/express": "^4.17.11",
-    "@types/three": "^0.127.1",
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.20",
     "express": "^4.17.1",
-    "three": "^0.128.0"
-  },
-  "devDependencies": {
-    "@types/node": "^14.14.41"
+    "three": "^0.118.3"
   }
 }
