@@ -1,6 +1,9 @@
 import http from "http";
 import path from "path";
 import express from "express";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const port = 3000;
 class App {
     constructor(port) {
